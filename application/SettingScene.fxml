@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="setting" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="game" stylesheets="@Image&amp;CSS/gamebackground.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GUIcontrolls">
+   <children>
+      <VBox fx:id="setting_vbox" alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="370.0" prefWidth="500.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+         <children>
+            <HBox fx:id="window_size_hbox" alignment="CENTER" prefHeight="150.0" prefWidth="670.0" spacing="20.0" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets left="60.0" right="40.0" top="35.0" />
+               </VBox.margin>
+               <children>
+                  <Label fx:id="window_size_label" text="Window Size:" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Gigi" size="24.0" />
+                     </font></Label>
+                  <RadioButton fx:id="eight_by_six_radio" mnemonicParsing="false" onAction="#getResolution" text="800 * 600" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Gigi" size="16.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="window_size_toggle_group" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="eleven_by_six_radio" mnemonicParsing="false" onAction="#getResolution" text="1067 * 600" toggleGroup="$window_size_toggle_group" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Gigi" size="16.0" />
+                     </font></RadioButton>
+                  <RadioButton fx:id="thirteen_by_nine_radio" mnemonicParsing="false" onAction="#getResolution" text="1280 * 900" toggleGroup="$window_size_toggle_group" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Gigi" size="16.0" />
+                     </font></RadioButton>
+                  <RadioButton fx:id="full_screen_radio" mnemonicParsing="false" onAction="#getResolution" text="Full Screen" toggleGroup="$window_size_toggle_group" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Gigi" size="16.0" />
+                     </font></RadioButton>
+               </children>
+            </HBox>
+            <HBox fx:id="volume_hbox" alignment="CENTER" prefHeight="150.0" prefWidth="670.0" spacing="20.0" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets left="60.0" right="40.0" />
+               </VBox.margin>
+               <children>
+                  <Label fx:id="volume_label" prefHeight="38.0" prefWidth="88.0" text="Volume: " HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Gigi" size="24.0" />
+                     </font></Label>
+                  <Slider fx:id="volume_slider" majorTickUnit="10.0" minorTickCount="1" prefHeight="37.0" prefWidth="453.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="100.0">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin></Slider>
+               </children>
+            </HBox>
+            <HBox fx:id="sensitivity_hbox" alignment="CENTER" prefHeight="150.0" prefWidth="670.0" spacing="20.0" visible="false" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets left="60.0" right="40.0" />
+               </VBox.margin>
+               <children>
+                  <Label fx:id="sensitivity_label" text="Sensitivity:">
+                     <font>
+                        <Font name="Gigi" size="24.0" />
+                     </font></Label>
+               </children>
+            </HBox>
+            <HBox fx:id="DSR_hbox" alignment="CENTER" prefHeight="58.0" prefWidth="704.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Button fx:id="default_setting" mnemonicParsing="false" onAction="#default_setting" prefHeight="80.0" prefWidth="120.0" styleClass="defaultButton" stylesheets="@Image&amp;CSS/default.css" />
+                  <Button fx:id="save_setting" mnemonicParsing="false" onAction="#save_setting" prefHeight="80.0" prefWidth="120.0" styleClass="saveButton" stylesheets="@Image&amp;CSS/save.css" />
+                  <Button fx:id="return_home" mnemonicParsing="false" onAction="#returnToHome" prefHeight="80.0" prefWidth="120.0" styleClass="returnButton" stylesheets="@Image&amp;CSS/return.css" />
+               </children>
+               <VBox.margin>
+                  <Insets left="400.0" />
+               </VBox.margin>
+            </HBox>
+         </children></VBox>
+   </children>
+</AnchorPane>
