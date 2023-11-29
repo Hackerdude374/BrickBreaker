@@ -25,7 +25,7 @@ Follow these steps to get the BrickBreaker game running on your local machine:
 
 ### 1. Clone the Repository
 
-```bash
+
 git clone https://github.com/your-username/brick-breaker.git
 cd brick-breaker
 
