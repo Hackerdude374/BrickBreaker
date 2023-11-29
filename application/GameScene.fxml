@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="GameScene" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="game" stylesheets="@Image&amp;CSS/gamebackground.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GamePlay">
+   <children>
+      <Circle fx:id="ball" fill="#21a2ff" layoutX="400.0" layoutY="335.0" radius="15.0" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" />
+      <Rectangle fx:id="paddle" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="20.0" layoutX="340.0" layoutY="549.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+      <Rectangle fx:id="left_border" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="600.0" layoutX="-20.0" stroke="BLACK" strokeType="INSIDE" width="20.0" />
+      <Rectangle fx:id="right_border" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="600.0" layoutX="800.0" stroke="BLACK" strokeType="INSIDE" width="20.0" />
+      <Rectangle fx:id="top_border" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="20.0" layoutY="-19.0" stroke="BLACK" strokeType="INSIDE" width="800.0" />
+      <Rectangle fx:id="bottom_border" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="20.0" layoutY="600.0" stroke="BLACK" strokeType="INSIDE" width="800.0" />
+      <VBox fx:id="GamePausedVBox" alignment="CENTER" layoutX="275.0" layoutY="150.0" prefHeight="300.0" prefWidth="250.0" spacing="20.0" styleClass="game" stylesheets="@Image&amp;CSS/gamebackground.css" visible="false" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="275.0" AnchorPane.rightAnchor="275.0" AnchorPane.topAnchor="150.0">
+         <children>
+            <Label prefHeight="60.0" prefWidth="140.0" text="Game Paused">
+               <font>
+                  <Font name="Gigi" size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="continue_button" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#continueGame" prefHeight="65.0" prefWidth="120.0" styleClass="loadButton" stylesheets="@Image&amp;CSS/continue.css" VBox.vgrow="ALWAYS" />
+            <Button fx:id="return_button1" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#returnToHome" prefHeight="65.0" prefWidth="120.0" styleClass="returnButton" stylesheets="@Image&amp;CSS/return.css" VBox.vgrow="ALWAYS" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+      <VBox fx:id="GameOverVBox" alignment="CENTER" layoutX="285.0" layoutY="160.0" prefHeight="300.0" prefWidth="250.0" spacing="20.0" styleClass="game" stylesheets="@Image&amp;CSS/gamebackground.css" visible="false" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="275.0" AnchorPane.rightAnchor="275.0" AnchorPane.topAnchor="150.0">
+         <children>
+            <Label fx:id="GameOverLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="60.0" prefWidth="200.0" text="Game Over" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font name="Gigi" size="30.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="70.0" prefWidth="250.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label fx:id="GameOverPoints" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="50.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Haettenschweiler" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="100.0" text="Points" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Haettenschweiler" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <Button fx:id="start_button" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#startGame" prefHeight="65.0" prefWidth="120.0" styleClass="startButton" stylesheets="@Image&amp;CSS/start.css" VBox.vgrow="ALWAYS" />
+            <Button fx:id="return_button" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#returnToHome" prefHeight="65.0" prefWidth="120.0" styleClass="returnButton" stylesheets="@Image&amp;CSS/return.css" VBox.vgrow="ALWAYS" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+   </children>
+</AnchorPane>

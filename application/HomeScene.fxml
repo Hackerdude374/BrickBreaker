@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="home" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="home" stylesheets="@Image&amp;CSS/homebackground.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GUIcontrolls">
+   <children>
+      <VBox alignment="CENTER" layoutX="235.0" layoutY="130.0" prefHeight="300.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+         <children>
+            <HBox alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="134.0">
+               <children>
+                  <Label fx:id="music_label" prefHeight="38.0" prefWidth="80.0" text="Music: " HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Gigi" size="24.0" />
+                     </font></Label>
+                  <CheckBox fx:id="music_check_box" mnemonicParsing="false" onAction="#on_off" prefHeight="16.0" prefWidth="84.0" selected="true" text="ON/OFF" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Harrington" size="14.0" />
+                     </font></CheckBox>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </HBox>
+            <HBox alignment="CENTER" fillHeight="false" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Button fx:id="startButton" mnemonicParsing="false" onAction="#startGame" prefHeight="75.0" prefWidth="135.0" styleClass="startButton" stylesheets="@Image&amp;CSS/start.css" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" fillHeight="false" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Button fx:id="loadButton" mnemonicParsing="false" onAction="#load" prefHeight="75.0" prefWidth="135.0" styleClass="loadButton" stylesheets="@Image&amp;CSS/continue.css" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" fillHeight="false" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Button fx:id="settingButton" mnemonicParsing="false" onAction="#setting" prefHeight="75.0" prefWidth="135.0" styleClass="settingButton" stylesheets="@Image&amp;CSS/setting.css" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" fillHeight="false" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Button fx:id="exitButton" mnemonicParsing="false" onAction="#exit" prefHeight="75.0" prefWidth="135.0" styleClass="exitButton" stylesheets="@Image&amp;CSS/exit.css" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <MenuBar layoutY="2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#exit" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#help" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane fx:id="HelpPane" prefHeight="600.0" prefWidth="800.0" styleClass="help" stylesheets="@Image&amp;CSS/help.css" visible="false" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <HBox alignment="CENTER" layoutX="200.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="400.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Button fx:id="CloseHelpButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#closeHelp" prefHeight="80.0" prefWidth="120.0" styleClass="exitButton" stylesheets="@Image&amp;CSS/exit.css" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
